@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: newapp
+  namespace: newapp
+spec:
+  containers:
+  - image: ghcr.io/go4clouds/newapp:latest
+    name: newapp
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
