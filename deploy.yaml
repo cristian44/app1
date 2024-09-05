@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: newapp
+  name: newapp
+  namespace: newapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: newapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: newapp
+    spec:
+      containers:
+      - image: ghcr.io/go4clouds/newapp:latest
+        name: newapp
+        resources: {}
+status: {}
